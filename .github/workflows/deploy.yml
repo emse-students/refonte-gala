@@ -1,0 +1,40 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Generate SvelteKit files
+        run: bunx svelte-kit sync
+
+      - name: Build application
+        run: bun run build
+
+      - name: Paste files to right location
+        run: |
+          cd ~/gala
+          # Remove all files except .env
+          find . -mindepth 1 -maxdepth 1 -not -name ".env" -exec rm -rf {} +
+          cp ~/actions-runner/_work/refonte-gala/refonte-gala/* . -r
+
+      - name: Restart server
+        run: |
+          pm2 restart gala || pm2 start bun --name gala -- run ./build/index.js
