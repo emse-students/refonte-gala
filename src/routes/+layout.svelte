@@ -2,6 +2,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
+	import '../app.css';
 
 	let { children } = $props();
 </script>
@@ -11,7 +12,7 @@
 </svelte:head>
 
 <div class="app">
-	<Header/>
+	<Header />
 	<main>
 		{@render children()}
 	</main>
