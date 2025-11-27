@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { pushState } from "$app/navigation";
-	import { asset, resolve } from "$app/paths";
-	import { page } from "$app/state";
-	import { onMount, tick } from "svelte";
+	import { pushState } from '$app/navigation';
+	import { asset, resolve } from '$app/paths';
+	import { page } from '$app/state';
+	import { onMount, tick } from 'svelte';
 
 	let navOpen = $state(false);
 	let navUl: HTMLUListElement;
-	let underlineStyle = $state("");
+	let underlineStyle = $state('');
 
-	function openNav(){
+	function openNav() {
 		if (!navOpen) {
 			navOpen = true;
-			pushState("", { navMenu: true });
+			pushState('', { navMenu: true });
 		}
 	}
 
@@ -37,31 +37,29 @@
 <header class:menu-open={navOpen}>
 	<div class="header-left">
 		<a href="/">
-			<img src={asset('/logo-gala.jpg')} alt="logo gala" class="logo-gala" />
+			<img src={asset('/logo-gala.png')} alt="logo gala" class="logo-gala" />
 		</a>
 	</div>
 	<nav class="nav-menu" class:open={navOpen}>
 		<ul bind:this={navUl}>
-				<li
-					aria-current={page.url.pathname.startsWith(resolve("/accueil")) ? "page" : undefined}
-				>
-					<a href={resolve("/accueil")} onclick={closeNav}>Accueil</a>
-				</li>
-				<li aria-current={page.url.pathname.startsWith(resolve("/qui-sommes-nous")) ? "page" : undefined}>
-					<a href={resolve("/qui-sommes-nous")} onclick={closeNav}>Qui sommes nous?</a>
-				</li>
-				<li
-					aria-current={page.url.pathname.startsWith(resolve("/billetterie")) ? "page" : undefined}
-				>
-					<a href={resolve("/billetterie")} onclick={closeNav}>Billetterie</a>
-				</li>
-				<li
-					aria-current={page.url.pathname.startsWith(resolve("/partenaires")) ? "page" : undefined}
-				>
-					<a href={resolve("/partenaires")} onclick={closeNav}>Partenaires</a>
-				</li>
-				<div class="nav-underline" style={underlineStyle}></div>
-			</ul>
+			<li aria-current={page.url.pathname.startsWith(resolve('/accueil')) ? 'page' : undefined}>
+				<a href={resolve('/accueil')} onclick={closeNav}>Accueil</a>
+			</li>
+			<li
+				aria-current={page.url.pathname.startsWith(resolve('/qui-sommes-nous'))
+					? 'page'
+					: undefined}
+			>
+				<a href={resolve('/qui-sommes-nous')} onclick={closeNav}>Qui sommes nous?</a>
+			</li>
+			<li aria-current={page.url.pathname.startsWith(resolve('/billetterie')) ? 'page' : undefined}>
+				<a href={resolve('/billetterie')} onclick={closeNav}>Billetterie</a>
+			</li>
+			<li aria-current={page.url.pathname.startsWith(resolve('/partenaires')) ? 'page' : undefined}>
+				<a href={resolve('/partenaires')} onclick={closeNav}>Partenaires</a>
+			</li>
+			<div class="nav-underline" style={underlineStyle}></div>
+		</ul>
 		{#if navOpen}
 			<div class="nav-overlay" role="presentation" onclick={toggleNav}></div>
 		{/if}
@@ -70,7 +68,7 @@
 
 <style>
 	header {
-		background-color: blueviolet;
+		background-color: #2874A6;
 		padding: 10px 20px;
 		display: flex;
 		align-items: center;
@@ -83,7 +81,7 @@
 	}
 
 	.logo-gala {
-		height: 80px;
+		height: 120px;
 		width: auto;
 		object-fit: contain;
 		display: block;
@@ -122,6 +120,6 @@
 
 	/* Masquer la barre de soulignement pour l'instant si elle n'est pas gérée */
 	.nav-underline {
-		display: none; 
+		display: none;
 	}
 </style>

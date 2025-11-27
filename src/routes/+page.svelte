@@ -10,7 +10,7 @@
 <style>
 	.page-content {
 		text-align: center;
-		background-color: blueviolet;
+		background: linear-gradient(180deg, #2874A6 0%,  #1B4F72 100%);
 		flex: 1;
 		display: flex;
 		flex-direction: column;
