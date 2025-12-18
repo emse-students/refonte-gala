@@ -4,6 +4,8 @@
 <div class="page-content">
     <h1>Qui sommes nous?</h1>
     <hr/>
+    <img src="/qui_sommes_nous/promo_icm.jpg" alt="promo diplomée en 2025" class="promo-img" />
+    <hr/>
     <div class="text-container">
         <p>L’École Mines Saint-Étienne, depuis sa création en 1816, compte parmi les plus anciennes écoles d’ingénieurs en France et fait partie de l’Institut Mines-Télécom. Chaque année, elle accueille une centaine d’étudiants issus de classes préparatoires pour les former aux missions de l’ingénieur de demain.
             Le diplôme d’Ingénieur Civil des Mines, délivré cette année à la promotion 2022, est aujourd’hui l’un des plus prestigieux en France.
@@ -41,6 +43,13 @@
         color: rgba(255, 217, 0, 0.94);
         font-size: 1.5em;
         font-weight : normal;
+    }
+    .promo-img{
+        max-width: 80%;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
 
 </style>
