@@ -4,7 +4,7 @@
 <div class="page-content">
 	<h1>Gala 2026</h1>
 	<p>Mines Saint-Etienne</p>
-	<p>rendez-vous le 15 mars 2026</p>
+	<p>rendez-vous le 14 mars 2026</p>
 </div>
 
 <style>
