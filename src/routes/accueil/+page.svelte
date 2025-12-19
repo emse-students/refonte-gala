@@ -1,9 +1,9 @@
 <script lang="ts">
-
+    import { asset } from "$app/paths";
 </script>
 <div class="page-content">
     <h1>Accueil</h1>
-    <img src="/accueil/facadeENSMSE.jpg" alt="Façade de l'école des Mines de Saint-Étienne" class="facade-img" />
+    <img src={asset("/accueil/facadeENSMSE.jpg")} alt="Façade de l'école des Mines de Saint-Étienne" class="facade-img" />
     <p>Bienvenue sur le site officiel du Gala Mines Saint-Étienne 2026 !</p>
 </div>
 <style>

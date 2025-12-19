@@ -1,10 +1,10 @@
 <script lang="ts">
-
+    import { asset } from "$app/paths";
 </script>
 <div class="page-content">
     <h1>Qui sommes nous?</h1>
     <hr/>
-    <img src="/qui_sommes_nous/promo_icm.jpg" alt="promo diplomée en 2025" class="promo-img" />
+    <img src={asset("/qui_sommes_nous/promo_icm.jpg")} alt="promo diplomée en 2025" class="promo-img" />
     <hr/>
     <div class="text-container">
         <p>L’École Mines Saint-Étienne, depuis sa création en 1816, compte parmi les plus anciennes écoles d’ingénieurs en France et fait partie de l’Institut Mines-Télécom. Chaque année, elle accueille une centaine d’étudiants issus de classes préparatoires pour les former aux missions de l’ingénieur de demain.

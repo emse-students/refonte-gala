@@ -1,14 +1,16 @@
 <script lang="ts">
+	import { asset } from "$app/paths";
+
 </script>
 
 <div class="page-content">
 	<h1>Partenaires</h1>
 	<p>Nous remercions chaleureusement nos partenaires pour leur soutien au Gala Mines Saint-Étienne 2026.</p>
 	<a href="https://www.societegenerale.com/fr">
-		<img src="/partenaires/sg.png" alt="logo_sg" style="max-width: 200px; margin: 20px;"/>
+		<img src={asset("/partenaires/sg.png")} alt="logo_sg" style="max-width: 200px; margin: 20px;"/>
 	</a>
 	<a href="http://paulh-homme.com/">
-		<img src ="/partenaires/paulh-nobg.png" alt="logo_paulH" style="max-width: 200px; margin: 20px;"/>
+		<img src={asset("/partenaires/paulh-nobg.png")} alt="logo_paulH" style="max-width: 200px; margin: 20px;"/>
 	</a>
 </div>
 
