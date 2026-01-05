@@ -32,8 +32,6 @@
 	}
 </script>
 
-<title>Gala 2026 - Mines Saint-Etienne</title>
-
 <header class:menu-open={navOpen}>
 	<div class="header-left">
 		<a href="/">
@@ -42,8 +40,8 @@
 	</div>
 	<nav class="nav-menu" class:open={navOpen}>
 		<ul bind:this={navUl}>
-			<li aria-current={page.url.pathname.startsWith(resolve('/accueil')) ? 'page' : undefined}>
-				<a href={resolve('/accueil')} onclick={closeNav}>Accueil</a>
+			<li aria-current={page.url.pathname === resolve('/') ? 'page' : undefined}>
+				<a href={resolve('/')} onclick={closeNav}>Accueil</a>
 			</li>
 			<li
 				aria-current={page.url.pathname.startsWith(resolve('/qui-sommes-nous'))
@@ -68,7 +66,7 @@
 
 <style>
 	header {
-		background-color: #2874A6;
+		background-color: var(--color-primary);
 		padding: 10px 20px;
 		display: flex;
 		align-items: center;

@@ -1,5 +1,18 @@
+:root {
+    --color-primary: #0A2342;
+    --color-secondary: #020C1B;
+    --color-accent: #ffd900;
+    --color-text-shadow: #000000;
+
+    --font-heading: 'Cinzel Decorative', serif;
+    --font-body: serif;
+
+    --gradient-bg: linear-gradient(180deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-body);
 }

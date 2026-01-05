@@ -7,7 +7,7 @@
 <style>
     .page-content {
         text-align: center;
-        background: linear-gradient(180deg, #2874A6 0%,  #1B4F72 100%);
+        background: linear-gradient(180deg, var(--color-primary) 0%,  var(--color-secondary) 100%);
         flex: 1;
         display: flex;
         flex-direction: column;
