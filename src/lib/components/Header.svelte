@@ -35,7 +35,7 @@
 <header class:menu-open={navOpen}>
 	<div class="header-left">
 		<a href="/">
-			<img src={asset('/logo-gala.png')} alt="logo gala" class="logo-gala" />
+			<img src={asset('/logo-gala-sans-fond.png')} alt="logo gala" class="logo-gala" />
 		</a>
 	</div>
 	<nav class="nav-menu" class:open={navOpen}>
@@ -105,7 +105,7 @@
 	li a {
 		color: white;
 		text-decoration: none;
-		font-family: 'Cinzel Decorative', serif;
+		font-family: var(--font-heading);
 		font-size: 1.1rem;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -113,7 +113,7 @@
 	}
 
 	li a:hover {
-		color: gold;
+		color: var(--color-accent);
 	}
 
 	/* Masquer la barre de soulignement pour l'instant si elle n'est pas gérée */

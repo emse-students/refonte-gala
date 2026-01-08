@@ -1,11 +1,11 @@
 :root {
     --color-primary: #0A2342;
     --color-secondary: #020C1B;
-    --color-accent: #ffd900;
+    --color-accent: #D4AF37;
     --color-text-shadow: #000000;
 
-    --font-heading: 'Cinzel Decorative', serif;
-    --font-body: serif;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
 
     --gradient-bg: linear-gradient(180deg, var(--color-primary) 0%, var(--color-secondary) 100%);
 }
